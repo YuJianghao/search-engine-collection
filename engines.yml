@@ -1,3 +1,21 @@
 - name: Google
   url: https://www.google.com/search?q=
   icon: 'logos:google-icon'
+- name: Github
+  url: https://github.com/search?q=
+  icon: 'logos:github-octocat'
+- name: NPM
+  url: https://www.npmjs.com/search?q=
+  icon: 'logos:npm-icon'
+- name: Bing
+  url: https://www.bing.com/search?q=
+  icon: 'logos:bing'
+- name: Yahoo
+  url: https://search.yahoo.com/search?p=
+  icon: 'logos:yahoo'
+- name: Zhihu
+  url: https://www.zhihu.com/search?q=
+  icon: 'simple-icons:zhihu'
+- name: Baidu
+  url: https://www.baidu.com/s?wd=
+  icon: 'simple-icons:baidu'

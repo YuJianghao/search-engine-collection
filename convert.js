@@ -20,7 +20,7 @@ const template = fs.readFileSync('template.md', 'utf8')
 
 const engines = jsonData.map((engine) => {
   const { name, url, icon } = engine
-  return `| ![https://api.iconify.design/${icon}.svg](https://api.iconify.design/${icon}.svg) | ${name} | ${url} |`
+  return `| ![${icon}](https://api.iconify.design/${icon}.svg?color=currentColor) | ${name} | ${url} |`
 }).join('\n')
 
 const readme = template.replace('{{engines}}', engines)
