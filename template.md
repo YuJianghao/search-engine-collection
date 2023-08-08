@@ -17,6 +17,7 @@ import engines from 'search-engine-collection'
 
 console.log(engines[0])
 // {
+//   key: 'google',
 //   name: 'Google',
 //   url: 'https://www.google.com/search?q=',
 //   icon: 'logos:google-icon',
@@ -25,6 +26,7 @@ console.log(engines[0])
 
 | Property | Type   | Description                                        |
 | -------- | ------ | -------------------------------------------------- |
+| key      | string | Search Engine Key                                  |
 | name     | string | Search Engine Name                                 |
 | url      | string | Search Engine URL, you can append keyword after it |
 | icon     | string | icons from <https://icones.antfu.me/>              |
