@@ -23,11 +23,11 @@ console.log(engines[0])
 // }
 ```
 
-| Property | Type   | Description                                           |
-| -------- | ------ | ----------------------------------------------------- |
-| name     | string | Search Engine Name                                    |
-| url      | string | Search Engine URL, you can append keyword after it    |
-| icon     | string | icons from <https://icones.antfu.me/collection/logos> |
+| Property | Type   | Description                                        |
+| -------- | ------ | -------------------------------------------------- |
+| name     | string | Search Engine Name                                 |
+| url      | string | Search Engine URL, you can append keyword after it |
+| icon     | string | icons from <https://icones.antfu.me/>              |
 
 ## Engine List
 
