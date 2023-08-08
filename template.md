@@ -33,7 +33,7 @@ console.log(engines[0])
 
 | icon | name | url |
 | ---- | ---- | --- |
-| ![https://api.iconify.design/logos:google-icon.svg](https://api.iconify.design/logos:google-icon.svg) | Google | https://www.google.com/search?q= |
+{{engines}}
 
 ## License
 

@@ -29,6 +29,9 @@ importers:
       esno:
         specifier: ^0.17.0
         version: 0.17.0
+      js-yaml:
+        specifier: ^4.1.0
+        version: 4.1.0
       lint-staged:
         specifier: ^13.2.3
         version: 13.2.3
@@ -1931,7 +1934,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.12.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     transitivePeerDependencies:
       - supports-color
     dev: true

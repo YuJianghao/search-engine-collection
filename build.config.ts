@@ -8,5 +8,11 @@ export default defineBuildConfig({
   clean: true,
   rollup: {
     emitCJS: true,
+    inlineDependencies: true,
+    alias: {
+      entries: [
+        { find: 'engines', replacement: './engines.ts' },
+      ],
+    },
   },
 })

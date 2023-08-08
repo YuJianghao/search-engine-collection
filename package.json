@@ -36,14 +36,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "nr generate && unbuild",
+    "dev": "nr generate && unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "generate": "node convert.js"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
@@ -53,6 +54,7 @@
     "bumpp": "^9.1.1",
     "eslint": "^8.45.0",
     "esno": "^0.17.0",
+    "js-yaml": "^4.1.0",
     "lint-staged": "^13.2.3",
     "pnpm": "^8.6.10",
     "rimraf": "^5.0.1",
