@@ -1,7 +1,7 @@
 {
   "name": "search-engine-collection",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@8.6.10",
   "description": "",
   "author": "Yu Jianghao <anthonyfu117@hotmail.com>",
