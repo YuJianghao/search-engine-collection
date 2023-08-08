@@ -7,6 +7,7 @@ const jsonData = yaml.load(data)
 
 const code
 = `export interface Engine {
+  key: string
   name: string
   url: string
   icon: string
@@ -19,8 +20,8 @@ fs.writeFileSync('engines.ts', code)
 const template = fs.readFileSync('template.md', 'utf8')
 
 const engines = jsonData.map((engine) => {
-  const { name, url, icon } = engine
-  return `| ![${icon}](https://api.iconify.design/${icon}.svg?color=currentColor) | ${name} | ${url} |`
+  const { key, name, url, icon } = engine
+  return `| \`${key}\` | ![${icon}](https://api.iconify.design/${icon}.svg?color=currentColor) | ${name} | ${url} |`
 }).join('\n')
 
 const readme = template.replace('{{engines}}', engines)
