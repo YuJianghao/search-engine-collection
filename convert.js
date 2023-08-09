@@ -5,23 +5,30 @@ const data = fs.readFileSync('engines.yml', 'utf8')
 
 const jsonData = yaml.load(data)
 
-const code
-= `export interface Engine {
-  key: string
+const code = `
+export type Engines = ${jsonData.map(engine => `'${engine.key}'`).join(' | ')}
+
+export interface Engine {
+  key: Engines
   name: string
+  /** search pattern */
   url: string
-  icon: string
+  /** iconify icon @see https://icones.antfu.me/ */
+  icones?: string
+  /** icon url */
+  icon?: string
 }
 
-export default ${JSON.stringify(jsonData, null, 2)} as Engine[]`
+export default ${JSON.stringify(jsonData, null, 2)} as Engine[]
+`
 
 fs.writeFileSync('engines.ts', code)
 
 const template = fs.readFileSync('template.md', 'utf8')
 
 const engines = jsonData.map((engine) => {
-  const { key, name, url, icon } = engine
-  return `| \`${key}\` | ![${icon}](https://api.iconify.design/${icon}.svg?color=currentColor) | ${name} | ${url} |`
+  const { key, name, url, icones } = engine
+  return `| \`${key}\` | ![${icones}](https://api.iconify.design/${icones}.svg?color=currentColor) | ${name} | ${url} |`
 }).join('\n')
 
 const readme = template.replace('{{engines}}', engines)

@@ -36,6 +36,7 @@
     "dist"
   ],
   "scripts": {
+    "postinstall": "nr build",
     "build": "nr generate && unbuild",
     "dev": "nr generate && unbuild --stub",
     "lint": "eslint .",
