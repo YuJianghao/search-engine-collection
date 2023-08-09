@@ -10,5 +10,5 @@ export function getEngine(key: Engines) {
 }
 
 export function hasEngine(key: string) {
-  return !!getEngine(key as Engines)
+  return engines.some(engine => engine.key === key)
 }
