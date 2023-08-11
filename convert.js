@@ -38,7 +38,7 @@ const template = fs.readFileSync('template.md', 'utf8')
 const engines = jsonData
   .map((engine) => {
     const { key, name, url } = engine
-    return `| \`${key}\` | ${name} | ${url} |`
+    return `| \`${key}\` | ${name} | \`${url}\` |`
   })
   .join('\n')
 
