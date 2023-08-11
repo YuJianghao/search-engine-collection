@@ -38,14 +38,15 @@
   "scripts": {
     "postinstall": "nr build",
     "build": "nr generate && unbuild",
-    "dev": "nr generate && unbuild --stub",
+    "dev": "nr generate:watch",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "generate": "node convert.js"
+    "generate:watch": "chokidar './convert.js' './engines.yml' './template.md' -c 'nr generate'",
+    "generate": "node convert.js && eslint ./engines.ts --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
@@ -53,6 +54,7 @@
     "@antfu/utils": "^0.7.5",
     "@types/node": "^20.4.5",
     "bumpp": "^9.1.1",
+    "chokidar-cli": "^3.0.0",
     "eslint": "^8.45.0",
     "esno": "^0.17.0",
     "js-yaml": "^4.1.0",

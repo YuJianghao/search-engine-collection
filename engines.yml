@@ -1,28 +1,21 @@
 - name: Google
   key: google
   url: https://www.google.com/search?q=
-  icones: 'logos:google-icon'
 - name: Github
   key: github
   url: https://github.com/search?q=
-  icones: 'logos:github-octocat'
 - name: NPM
   key: npm
   url: https://www.npmjs.com/search?q=
-  icones: 'logos:npm-icon'
 - name: Bing
   key: bing
   url: https://www.bing.com/search?q=
-  icones: 'logos:bing'
 - name: Yahoo
   key: yahoo
   url: https://search.yahoo.com/search?p=
-  icones: 'logos:yahoo'
 - name: Zhihu
   key: zhihu
   url: https://www.zhihu.com/search?q=
-  icones: 'simple-icons:zhihu'
 - name: Baidu
   key: baidu
   url: https://www.baidu.com/s?wd=
-  icones: 'simple-icons:baidu'
